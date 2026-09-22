@@ -27,7 +27,7 @@ require __DIR__ . '/includes/header.php';
   <header class="nc-page__intro" data-reveal>
     <p class="nc-kicker">Storico</p>
     <h1>Archivio comunicazioni</h1>
-    <p class="nc-lead">Le ultime note trasformate. Utile in colloquio: mostri il pezzo “AMS” — traccia, gravità, messaggio utente.</p>
+    <p class="nc-lead">Le ultime note trasformate. Utile in colloquio: mostri il pezzo “AMS” — traccia, gravità e messaggio utente.</p>
   </header>
 
   <form class="nc-filter" method="get" action="archivio.php">

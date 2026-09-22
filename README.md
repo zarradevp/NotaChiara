@@ -1,15 +1,15 @@
 # NotaChiara
 
-Progetto di portfolio: trasforma una nota tecnica (ticket, SSH, monitoring) in tre testi pronti — messaggio per gli utenti, riassunto da attaccare al ticket, riga per la pagina stato.
+Progetto di portfolio: trasforma una nota tecnica (ticket, SSH e monitoring) in tre testi pronti — messaggio per gli utenti, riassunto da attaccare al ticket e riga per la pagina stato.
 
 Niente account, niente framework, niente API esterne. HTML, CSS, JavaScript e PHP.
 
 ## Cosa fa
 
-Incolli servizio, gravità (`down`, `degradato`, `operativo`) e il testo così come l’hai scritto. NotaChiara toglie hostname e gergo e genera:
+Incolli servizio, gravità (`down`, `degradato` e `operativo`) e il testo così come l’hai scritto. NotaChiara toglie hostname e gergo e genera:
 
-- **Utenti** — linguaggio piano, cosa sta succedendo, cosa fare
-- **Ticket interno** — impatto, segnali, azioni consigliate, next step
+- **Utenti** — linguaggio piano, cosa sta succedendo e cosa fare
+- **Ticket interno** — impatto, segnali, azioni consigliate e next step
 - **Pagina stato** — una frase pubblica da aggiornare a ogni cambio
 
 Ogni generazione resta in archivio e aggiorna lo stato del servizio, come un piccolo AMS.
@@ -19,7 +19,7 @@ Ogni generazione resta in archivio e aggiorna lo stato del servizio, come un pic
 | File | Contenuto |
 | --- | --- |
 | `index.php` | Prodotto e esempio prima / dopo |
-| `demo.php` | Form interattivo, esempi, copia dei tre output |
+| `demo.php` | Form interattivo, esempi e copia dei tre output |
 | `stato.php` | Pagina stato pubblica dei servizi |
 | `archivio.php` | Storico delle comunicazioni generate |
 | `privacy.php` | Informativa breve |

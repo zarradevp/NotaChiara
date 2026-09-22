@@ -16,7 +16,7 @@ require __DIR__ . '/includes/header.php';
     <div class="nc-hero__copy">
       <p class="nc-kicker"><span class="nc-live" aria-hidden="true"></span> Comunicazione incident · Portfolio</p>
       <h1>Dalla nota tecnica al messaggio che l’utente capisce.</h1>
-      <p class="nc-lead">Incolli quello che hai scritto sul ticket o dopo un accesso SSH. NotaChiara toglie il gergo e prepara tre testi pronti: per gli utenti, per il ticket, per la pagina stato.</p>
+      <p class="nc-lead">Incolli quello che hai scritto sul ticket o dopo un accesso SSH. NotaChiara toglie il gergo e prepara tre testi pronti: per gli utenti, per il ticket e per la pagina stato.</p>
       <div class="nc-hero__actions">
         <a class="nc-btn nc-btn--primary" href="demo.php">Prova con una nota vera</a>
         <a class="nc-btn nc-btn--ghost" href="stato.php">Vedi lo stato servizi</a>
@@ -45,11 +45,11 @@ Non è un problema password.</span><span class="nc-caret" aria-hidden="true"></s
     <ol class="nc-steps">
       <li class="nc-step">
         <h3>Incolli la nota</h3>
-        <p>Servizio, gravità e il testo così come l’hai scritto: VM, percentuali, restart, timeout.</p>
+        <p>Servizio, gravità e il testo così come l’hai scritto: VM, percentuali, restart e timeout.</p>
       </li>
       <li class="nc-step">
         <h3>Escono tre versioni</h3>
-        <p>Messaggio per gli utenti, riassunto da attaccare al ticket, riga per la pagina stato pubblica.</p>
+        <p>Messaggio per gli utenti, riassunto da attaccare al ticket e riga per la pagina stato pubblica.</p>
       </li>
       <li class="nc-step">
         <h3>Copi e tieni lo storico</h3>
@@ -78,11 +78,11 @@ Non è un problema password.</span><span class="nc-caret" aria-hidden="true"></s
     <div class="nc-cards">
       <article class="nc-card">
         <h3>Utenti</h3>
-        <p>Linguaggio piano, cosa sta succedendo, cosa fare, senza hostname e senza gergo.</p>
+        <p>Linguaggio piano, cosa sta succedendo e cosa fare, senza hostname e senza gergo.</p>
       </article>
       <article class="nc-card">
         <h3>Ticket interno</h3>
-        <p>Impatto, segnali rilevati, estratto della nota, azioni consigliate, next step.</p>
+        <p>Impatto, segnali rilevati, estratto della nota, azioni consigliate e next step.</p>
       </article>
       <article class="nc-card">
         <h3>Pagina stato</h3>

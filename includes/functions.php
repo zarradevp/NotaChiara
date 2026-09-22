@@ -44,6 +44,24 @@ function nc_clip(string $text, int $length): string
     return $text;
 }
 
+function nc_join_it(array $items): string
+{
+    $items = array_values(array_map(static fn (mixed $item): string => (string) $item, $items));
+    $count = count($items);
+
+    if ($count === 0) {
+        return '';
+    }
+
+    if ($count === 1) {
+        return $items[0];
+    }
+
+    $last = array_pop($items);
+
+    return implode(', ', $items) . ' e ' . $last;
+}
+
 function nc_csrf_token(): string
 {
     if (empty($_SESSION['nc_csrf']) || !is_string($_SESSION['nc_csrf'])) {
@@ -344,7 +362,7 @@ function nc_compose_ticket(string $service, string $severity, array $signals, st
         default => 'Servizio ripristinato; da confermare con un giro di verifica.',
     };
 
-    $signalLabel = $signals === [] ? 'nessun segnale automatico (usare la nota originale)' : implode(', ', $signals);
+    $signalLabel = $signals === [] ? 'nessun segnale automatico (usare la nota originale)' : nc_join_it($signals);
     $excerpt = nc_excerpt($note, 280);
     $actions = nc_ticket_actions($signals);
     $etaLine = $eta !== null ? $eta : 'non dichiarata';
