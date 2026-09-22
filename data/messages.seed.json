@@ -1,0 +1,35 @@
+[
+  {
+    "id": "nc_seed_vpn",
+    "created_at": "2026-09-10T08:42:00+02:00",
+    "service": "VPN aziendale",
+    "severity": "operativo",
+    "note": "Tunnel IPSec giù dalle 07:50, restart servizio su gw-vpn-01, handshake ok alle 08:18. Utenti possono riconnettersi. Causa probabile: scadenza SA.",
+    "user_message": "La VPN aziendale è di nuovo disponibile.\n\nTra le 07:50 e le 08:18 la connessione protetta verso la rete interna non era raggiungibile. Il servizio è stato ripristinato: se eri collegato, chiudi e riapri la VPN.\n\nNon serve riavviare il computer. Se dopo la riconnessione non vedi le cartelle di rete, attendi un minuto e riprova.",
+    "ticket_summary": "Servizio: VPN aziendale\nGravità: Operativo (ripristinato)\nImpatto: Connessione VPN non disponibile dalle 07:50 alle 08:18.\nSegnali: rete, riavvio\nCausa presunta: negoziazione del tunnel; intervento con riavvio controllato del servizio sul gateway.\nAzioni svolte: restart del servizio VPN, verifica handshake.\nNext step: monitorare i log di autenticazione nelle prossime 24 ore.",
+    "status_update": "VPN aziendale: servizio operativo. Disservizio risolto alle 08:18. Gli utenti possono riconnettersi.",
+    "source": "seed"
+  },
+  {
+    "id": "nc_seed_portale",
+    "created_at": "2026-09-10T11:15:00+02:00",
+    "service": "Portale dipendenti",
+    "severity": "degradato",
+    "note": "Alert: disco /var al 93% su vm-web-02. Apache timeout intermittenti su /login. In corso pulizia log e rotate. ETA 40 min. Non è un problema di password utenti.",
+    "user_message": "Il Portale dipendenti è attivo, ma in questa fascia può risultare più lento del solito, soprattutto in fase di accesso.\n\nNon dipende dal tuo account o dalla password: stiamo liberando spazio sui sistemi che ospitano il portale. L’intervento è in corso e puntiamo a tornare alla normalità in circa 40 minuti.\n\nCosa puoi fare: attendi e riprova. Evita di inviare più volte lo stesso modulo.",
+    "ticket_summary": "Servizio: Portale dipendenti\nGravità: Degradato\nImpatto: Latenza e timeout intermittenti sulla pagina di login.\nSegnali: disco, web, timeout\nDettaglio tecnico: filesystem /var al 93% su vm-web-02; timeout Apache su /login.\nAzioni in corso: pulizia log, logrotate.\nETA dichiarata: 40 minuti.\nNota: non è un’anomalia delle credenziali utente.",
+    "status_update": "Portale dipendenti: servizio degradato. Possibili rallentamenti in accesso. Intervento in corso, aggiornamento previsto entro circa 40 minuti.",
+    "source": "seed"
+  },
+  {
+    "id": "nc_seed_posta",
+    "created_at": "2026-09-09T16:05:00+02:00",
+    "service": "Posta elettronica",
+    "severity": "operativo",
+    "note": "Coda SMTP smaltita. Queue era a 12k messaggi dopo blocco relay. Restart postfix ok. Nessuna perdita rilevata.",
+    "user_message": "La posta elettronica è operativa.\n\nPer alcune ore l’invio dei messaggi ha accumulato ritardo. La coda è stata smaltita e le email in attesa sono in consegna. Non risulta perdita di messaggi.\n\nSe un invio sembrava “bloccato”, controlla di nuovo la posta in uscita prima di reinviare.",
+    "ticket_summary": "Servizio: Posta elettronica\nGravità: Operativo (ripristinato)\nImpatto: Ritardo in invio, coda SMTP elevata (circa 12.000 messaggi).\nSegnali: posta, riavvio\nAzioni: sblocco relay, restart Postfix, smaltimento coda.\nEsito: nessuna perdita rilevata.",
+    "status_update": "Posta elettronica: servizio operativo. Ritardi di invio risolti; i messaggi in coda sono in consegna.",
+    "source": "seed"
+  }
+]
